@@ -37,12 +37,51 @@ namespace ClassRoom
             set { _semesterStart = value; }
         }
 
+        public void Seasons()
+        {
+            int Spring = 0;
+            int Summer = 0;
+            int Fall = 0;
+            int Winter = 0;
+
+            foreach (var Studerende in ClassList)
+            {
+                if (Studerende.Seasons()=="Spring")
+                {
+                    Spring += 1;
+                }
+
+                if (Studerende.Seasons() == "Summer")
+                {
+                    Summer += 1;
+                }
+
+                if (Studerende.Seasons() == "Fall")
+                {
+                    Fall += 1;
+                }
+
+                if (Studerende.Seasons() == "Winter")
+                {
+                    Winter += 1;
+                }
+
+                Console.WriteLine($"Spring: {Spring}");
+                Console.WriteLine($"Summer: {Summer}");
+                Console.WriteLine($"Fall: {Fall}");
+                Console.WriteLine($"Winter: {Winter}");
+            }
+
+
+
+        }
+
         
 
 
          public override string ToString()
         {
-            return _className + _classList + _semesterStart;
+            return $"{ClassName}{ClassList}{SemesterStart}";
         }
     }
 }

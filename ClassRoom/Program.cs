@@ -12,7 +12,7 @@ namespace ClassRoom
         {
             KlasseRum rum = new KlasseRum();
             
-            Studerende f1 = new Studerende("Jeneess  Gunatheeswaran", 9,26);
+            Studerende f1 = new Studerende("Jenees Gunatheeswaran", 9,26);
             Studerende f2 = new Studerende("Hassan Raza Hussain",4,15);
             Studerende f3 = new Studerende("Ahmed Metin Dönmez Aka Chad",8,29);
 
@@ -35,7 +35,12 @@ namespace ClassRoom
             {
                Console.WriteLine(Studerende);
             }
-    }
+
+            Console.WriteLine("");
+            Console.WriteLine("Antallet af elver der har fødselsdag i hver årstid er:");
+            rum.Seasons();
+            Console.ReadKey();
+        }
     }
 }
 
